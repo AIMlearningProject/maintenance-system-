@@ -1,11 +1,8 @@
 version: 1
 services:
   - type: web
-    name: maintenance-backend
+    name: maintenance-system
     env: node
-    plan: free
     buildCommand: npm install
     startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
+    rootDir: backend  # Set this if package.json is in the backend folder
