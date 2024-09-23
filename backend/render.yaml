@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: maintenance-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
