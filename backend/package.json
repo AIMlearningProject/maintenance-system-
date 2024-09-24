@@ -1,13 +1,29 @@
 {
   "name": "maintenance-backend",
   "version": "1.0.0",
+  "description": "Backend for the Maintenance System",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",  
+    "build": "npm install"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15" 
+  },
+  "engines": {
+    "node": ">=14.x" 
+  },
+  "keywords": [
+    "maintenance",
+    "repair",
+    "backend"
+  ],
+  "author": "Arafat",
+  "license": "ISC"
 }
