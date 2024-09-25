@@ -94,31 +94,29 @@ h3 {
   color: #007bff;
 }
 
-/* PRINT-SPECIFIC STYLES */
+/* Print Styles */
 @media print {
-  /* Prevent breaking within these sections */
-  .product-info, .customer-contact {
-    page-break-inside: avoid;
-  }
+    /* Ensure the body has no margin */
+    body {
+        margin: 0;
+    }
+    
+    /* Prevents breaking inside these sections */
+    .no-page-break {
+        page-break-inside: avoid; /* Prevents breaking inside this section */
+        page-break-after: auto;    /* Prevents breaking after this section */
+    }
 
-  /* Optionally hide elements not needed in print view */
-  .no-print {
-    display: none;
-  }
+    /* Hide elements that are not needed when printing */
+    button, 
+    .no-print {
+        display: none; /* Hide buttons and elements with class 'no-print' */
+    }
 
-  /* Reduce margins and padding to fit more content on a single page */
-  body, form {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Adjust font size and layout for print, if necessary */
-  body {
-    font-size: 12px;
-  }
-
-  /* Optionally hide any buttons or non-essential elements when printing */
-  button {
-    display: none;
-  }
+    /* Make font sizes more readable when printing */
+    h1, h2, h3 {
+        font-size: 1.5em; /* Adjust font sizes for printing */
+    }
+    
+    /* Additional styles can be adjusted as necessary */
 }
