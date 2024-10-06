@@ -20,31 +20,38 @@ form {
   margin-bottom: 30px;
 }
 
-label {
-  display: block;
-  margin: 10px 0 5px;
+/* Grid layout for form */
+.repair-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.repair-form-grid label {
+  margin: 5px 0;
   color: #495057;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-input[type="tel"],
-input[type="email"],
-textarea {
-  width: calc(100% - 20px);
+.repair-form-grid input[type="text"],
+.repair-form-grid input[type="date"],
+.repair-form-grid input[type="number"],
+.repair-form-grid input[type="tel"],
+.repair-form-grid input[type="email"],
+.repair-form-grid textarea {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 16px;
 }
 
-input[type="checkbox"] {
-  margin: 10px 5px;
+.repair-form-grid input[type="checkbox"] {
+  width: auto;
+  margin-left: 10px;
 }
 
 button {
+  grid-column: span 2;
   background: #007bff;
   color: #ffffff;
   border: none;
@@ -58,43 +65,6 @@ button:hover {
   background: #0056b3;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden; /* Added for rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #dee2e6;
-}
-
-th {
-  background: #007bff;
-  color: #ffffff;
-}
-
-tr:hover {
-  background: #f8f9fa;
-}
-
-hr {
-  margin: 20px 0;
-}
-
-h2 {
-  color: #343a40;
-}
-
-h3 {
-  color: #007bff;
-}
-
 /* Ensure sections are kept together when printing */
 @media print {
   /* Avoid breaking sections between pages */
@@ -105,12 +75,6 @@ h3 {
   /* Hide print button */
   .print-button {
     display: none;
-  }
-
-  /* Ensure the app container uses the full width on print */
-  .app-container {
-    width: 100%;
-    margin: 0;
   }
 
   /* Reduce margins and paddings for better print fit */
