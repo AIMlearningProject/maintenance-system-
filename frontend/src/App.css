@@ -64,7 +64,7 @@ table {
   margin-top: 20px;
   background: #ffffff;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Added for rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,7 +98,7 @@ h3 {
 /* Ensure sections are kept together when printing */
 @media print {
   /* Avoid breaking sections between pages */
-  .repair-item, .completed-repair {
+  .repair-item, .completed-repair, .repair-form-container {
     page-break-inside: avoid;
   }
 
