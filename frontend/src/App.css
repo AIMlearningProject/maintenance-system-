@@ -1,3 +1,4 @@
+/* General page styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e9ecef;
@@ -63,7 +64,7 @@ table {
   margin-top: 20px;
   background: #ffffff;
   border-radius: 8px;
-  overflow: hidden; /* Added for rounded corners */
+  overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -94,29 +95,27 @@ h3 {
   color: #007bff;
 }
 
-/* Print Styles */
+/* Ensure sections are kept together when printing */
 @media print {
-    /* Ensure the body has no margin */
-    body {
-        margin: 0;
-    }
-    
-    /* Prevents breaking inside these sections */
-    .no-page-break {
-        page-break-inside: avoid; /* Prevents breaking inside this section */
-        page-break-after: auto;    /* Prevents breaking after this section */
-    }
+  /* Avoid breaking sections between pages */
+  .repair-item, .completed-repair {
+    page-break-inside: avoid;
+  }
 
-    /* Hide elements that are not needed when printing */
-    button, 
-    .no-print {
-        display: none; /* Hide buttons and elements with class 'no-print' */
-    }
+  /* Hide print button */
+  .print-button {
+    display: none;
+  }
 
-    /* Make font sizes more readable when printing */
-    h1, h2, h3 {
-        font-size: 1.5em; /* Adjust font sizes for printing */
-    }
-    
-    /* Additional styles can be adjusted as necessary */
+  /* Ensure the app container uses the full width on print */
+  .app-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Reduce margins and paddings for better print fit */
+  body, .app-container {
+    margin: 0;
+    padding: 0;
+  }
 }
